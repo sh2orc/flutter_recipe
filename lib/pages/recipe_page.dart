@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_recipe/components/recipe_list_item.dart';
 import 'package:flutter_recipe/components/recipe_menu.dart';
@@ -13,8 +14,7 @@ class RecipePage extends StatelessWidget {
       appBar: _buildRecipeAppBar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
           children: [
             RecipeTitle(),
             RecipeMenu(),
@@ -29,6 +29,21 @@ class RecipePage extends StatelessWidget {
   }
 
   AppBar _buildRecipeAppBar(){
-    return AppBar();
+    return AppBar(
+      backgroundColor: Colors.white,
+      elevation: 1.0,
+      actions: [
+        Icon(
+          CupertinoIcons.search,
+          color: Colors.black,
+        ),
+        SizedBox(width: 15,),
+        Icon(
+          CupertinoIcons.heart,
+          color: Colors.redAccent,
+        ),
+        SizedBox(width: 15,)
+      ],
+    );
   }
 }
