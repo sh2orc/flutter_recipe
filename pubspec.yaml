@@ -62,7 +62,7 @@ flutter:
   fonts:
     - family: PatuaOne
       fonts:
-        - asset: assets/fonts/PatuaOne-Regular.ttf
+        - asset: assets/font/PatuaOne-Regular.ttf
 
   # To add assets to your application, add an assets section, like this:
   # assets:
